@@ -1,0 +1,11 @@
+{
+  "name": "@01ht/ht-need-login",
+  "version": "1.0.0",
+  "main": "ht-need-login.js",
+  "repository": "01ht/ht-need-login",
+  "author": "01ht Ltd",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.1"
+  }
+}
