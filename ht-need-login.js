@@ -1,8 +1,8 @@
-'use strict';
-import { LitElement, html } from '@polymer/lit-element';
+"use strict";
+import { LitElement, html } from "@polymer/lit-element";
 
 class HTNeedLogin extends LitElement {
-  _render({}) {
+  render() {
     return html`
     <style>
     :host {
@@ -19,6 +19,7 @@ class HTNeedLogin extends LitElement {
       align-items:center;
       justify-content:center;
       text-align:center;
+      margin:auto;
     }
 
     svg {
@@ -47,12 +48,12 @@ class HTNeedLogin extends LitElement {
       <path style="fill:#546A79;" d="M11.229,20H15v-6.5C15,8.262,19.935,4,26,4s11,4.262,11,9.5V20h3.771
         c0.077,0,0.152,0.009,0.229,0.011V13.5C41,6.075,34.25,0,26,0S11,6.075,11,13.5v6.511C11.077,20.009,11.152,20,11.229,20z"/>
       </svg>
-      <div id="title">Залогиньтесь для доступа к разделу</div>
+      <div id="title">Залогиньтесь</div>
     </div>`;
   }
 
   static get is() {
-      return 'ht-need-login';
+    return "ht-need-login";
   }
 }
 
