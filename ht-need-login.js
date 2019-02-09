@@ -1,11 +1,10 @@
 "use strict";
-import { LitElement, html } from "@polymer/lit-element";
+import { LitElement, html, css } from "lit-element";
 
 class HTNeedLogin extends LitElement {
-  render() {
-    return html`
-    ${SharedStyles}
-    <style>
+  static styles = [
+    window.SharedStyles,
+    css`<style>
     :host {
       display: flex;
       align-items:center;
@@ -39,7 +38,11 @@ class HTNeedLogin extends LitElement {
       font-size: 16px;
       color: var(--secondary-text-color);
     }
-    </style>
+    </style>`
+  ];
+
+  render() {
+    return html`
     <div id="container">
       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
@@ -53,14 +56,8 @@ class HTNeedLogin extends LitElement {
       </svg>
       <div id="title" class="mdc-typography--headline5">Нет доступа</div>
       <div id="sub-text">Страница доступна только авторизованым пользователям</div>
-      <paper-button raised @click=${_ => {
-        this._showLogin();
-      }}>Войти</paper-button>
+      <paper-button raised @click="${this._showLogin}">Войти</paper-button>
     </div>`;
-  }
-
-  static get is() {
-    return "ht-need-login";
   }
 
   _showLogin() {
@@ -73,4 +70,4 @@ class HTNeedLogin extends LitElement {
   }
 }
 
-customElements.define(HTNeedLogin.is, HTNeedLogin);
+customElements.define("ht-need-login", HTNeedLogin);
