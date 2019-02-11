@@ -1,45 +1,48 @@
 "use strict";
 import { LitElement, html, css } from "lit-element";
+import { styles } from "@01ht/ht-theme/styles";
 
 class HTNeedLogin extends LitElement {
-  static styles = [
-    window.SharedStyles,
-    css`<style>
-    :host {
-      display: flex;
-      align-items:center;
-      position: relative;
-      box-sizing: border-box;
-      height:100%;
-    }
+  static get styles() {
+    return [
+      styles,
+      css`
+        :host {
+          display: flex;
+          align-items: center;
+          position: relative;
+          box-sizing: border-box;
+          height: 100%;
+        }
 
-    #container {
-      display: flex;
-      flex-direction: column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      margin:auto;
-    }
+        #container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin: auto;
+        }
 
-    svg {
-      width:16vw;
-      max-width: 128px;
-      min-width: 96px;
-    }
+        svg {
+          width: 16vw;
+          max-width: 128px;
+          min-width: 96px;
+        }
 
-    #title {
-      margin-top: 24px;
-    }
+        #title {
+          margin-top: 24px;
+        }
 
-    #sub-text {
-      text-align: center;
-      margin: 8px 0 16px 0;
-      font-size: 16px;
-      color: var(--secondary-text-color);
-    }
-    </style>`
-  ];
+        #sub-text {
+          text-align: center;
+          margin: 8px 0 16px 0;
+          font-size: 16px;
+          color: var(--secondary-text-color);
+        }
+      `
+    ];
+  }
 
   render() {
     return html`
