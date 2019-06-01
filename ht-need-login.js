@@ -58,7 +58,7 @@ class HTNeedLogin extends LitElement {
         c0.077,0,0.152,0.009,0.229,0.011V13.5C41,6.075,34.25,0,26,0S11,6.075,11,13.5v6.511C11.077,20.009,11.152,20,11.229,20z"/>
       </svg>
       <div id="title" class="mdc-typography--headline5">Нет доступа</div>
-      <div id="sub-text">Страница доступна только авторизованым пользователям</div>
+      <div id="sub-text">Страница доступна только авторизованным пользователям</div>
       <paper-button raised @click="${this._showLogin}">Войти</paper-button>
     </div>`;
   }
